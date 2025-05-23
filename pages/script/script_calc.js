@@ -25,9 +25,12 @@ function exibirCampoPassageiros() {
     const combustivelSelect = document.getElementById('combustivel');
 
     // Limpa os campos de entrada
-    document.getElementById('distancia').value = ''; // Limpa a distância
-    inputPassageiros.value = ''; // Limpa o número de passageiros
-    document.getElementById('diasPorMes').value = ''; // Limpa quantas vezes faz a viagem por mês
+    document.getElementById('distancia').value = ''; 
+    // Limpa a distância
+    inputPassageiros.value = ''; 
+    // Limpa o número de passageiros
+    document.getElementById('diasPorMes').value = ''; 
+    // Limpa quantas vezes faz a viagem por mês
 
     // Se for carro ou moto, permitir edição do número de passageiros
     if (tipoVeiculo === 'carro' || tipoVeiculo === 'moto') {
