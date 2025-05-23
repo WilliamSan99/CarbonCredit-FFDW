@@ -324,6 +324,7 @@ footer {
     .resultado-calculo p{
         display: grid;
     }
+}
 
 @media (max-width: 425px) {
     #tipoPainel, #fretePago {
