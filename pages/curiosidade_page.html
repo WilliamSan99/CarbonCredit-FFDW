@@ -35,19 +35,20 @@
               role="button" onclick="scrollToTop()"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home<span class="sr-only">(Página atual)</span></a>
+            <a class="nav-link" href="../index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pages/informative_page.html">Informativo</a>
+            <a class="nav-link" href="./informative_page.html">Informativo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pages/calc_page.html">Calculadora CO₂</a>
+            <a class="nav-link" href="./emergia_page.html">Emergia</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="../pages/curiosidade_page.html">Curiosidades <span class="sr-only">(Página atual)</span></a>
+              <a class="dropdown-item" href="../pages/calc_page.html">Calculadora CO₂</a>
+              <a class="dropdown-item" href="../pages/curiosidade_page.html">Curiosidades<span class="sr-only">(Página atual)</span></a>
               <a class="dropdown-item" href="../pages/equipe_page.html">Equipe</a>
               <a class="dropdown-item" href="../pages/contact_page.html">Contato</a>
             </div>
@@ -356,7 +357,7 @@
       <section class="mb-5">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-8">
-            <img src="../img/logo_atualizado.png" alt="Logo da empresa FFWD" width="35px" style="cursor: pointer;"
+            <img src="../img/_iconLogo.png" alt="Logo da empresa FFWD" width="35px" style="cursor: pointer;"
               role="button" onclick="scrollToTop()">
           </div>
         </div>
@@ -375,20 +376,28 @@
     </script>
   
     <div class="text-center p-3" style="background-color: #b8b8b8">
-      © 2024
+      © <span id="currentYear"></span>
     </div>
-  
+
   </footer>
 </body>
 
-
 <script>
-  const scrollToTop = () => {
-    window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-    })
-  };
+// Define a função para exibir o ano atual
+const displayCurrentYear = () => {
+const currentYear = new Date().getFullYear();
+document.getElementById("currentYear").textContent = currentYear;
+};
+
+// Chama a função ao carregar a página
+window.onload = displayCurrentYear;
+
+const scrollToTop = () => {
+window.scrollTo({
+  top: 0,
+  behavior: 'smooth'
+});
+};
 </script>
 
 </html>
